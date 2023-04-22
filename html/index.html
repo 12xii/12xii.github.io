@@ -9,12 +9,24 @@
 </head>
 <body>
     <header class="header">
-        <div><a href="#profile">Profile</a></div>
-        <div><a href="#who-am-i">Who am I</a></div>
-        <div><a href="#career">Career</a></div>
-        <div><a href="#skills">Skills</a></div>
-        <div><a href="#projects">Projects</a></div>
-        <div><a href="#awards">Awards & Others</a></div>
+        <div class="logo">
+            <svg width="48" height="48" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" fill="#1E1E1E"/>
+                <rect width="32" height="32" rx="25" fill="#FFE091"/>
+                <path fill-rlie="evenodd" clip-rlie="evenodd" d="M273.716 88C266.018 74.6666 246.773 74.6667 239.075 88L147.709 246.25C145.797 249.563 144.953 253.082 145.002 256.499C144.953 259.918 145.796 263.437 147.709 266.75L239.075 425C246.773 438.333 266.018 438.333 273.716 425L365.082 266.75C366.994 263.437 367.838 259.918 367.789 256.501C367.838 253.083 366.995 249.563 365.082 246.25L273.716 88Z" fill="white"/>
+                <line x1="177.34" y1="327.147" x2="317.34" y2="84.6602" stroke="#FFE091" stroke-width="20" stroke-linecap="round"/>
+                <line x1="10" y1="-10" x2="290" y2="-10" transform="matrix(0.5 0.866025 0.866025 -0.5 181 173)" stroke="#FFE091" stroke-width="20" stroke-linecap="round"/>
+            </svg>
+            <h1 style="font-size:large">Portfolio.dev</h1>
+        </div>
+        <div>
+            <div><a href="#profile">Profile</a></div>
+            <div><a href="#who-am-i">Who am I</a></div>
+            <div><a href="#career">Career</a></div>
+            <div><a href="#skills">Skills</a></div>
+            <div><a href="#projects">Projects</a></div>
+            <div><a href="#awards">Awards & Others</a></div>
+        </div>
     </header>
     <div class="head">
         <div class="expression">
@@ -48,19 +60,69 @@
             </div>
         </div>
     </div>
+    <!-- 
     <div class="row-column"></div>
     <div class="Who-am-I" id="who-am-i">
         <h1>Who am I?</h1>
-    </div>
+    </div> 
+    -->
     <div class="row-column"></div>
     <div class="Education&Career" id="career">
-        <h1>Education</h1>
+        <div class="Education">
+            <h1>Education</h1>
+        </div>
+        <div class="Career">
+
+        </div>
         <h1>Career</h1>
     </div>
     <div class="row-column"></div>
-    <div class="Skills&Tools" id="skills">
-        <h1>Skills</h1>
-        <h1>Tools</h1>
+    <div class="Skills-Tools" id="skills">
+        <div class="Skills">
+            <h1>Skills</h1>
+            <div>
+                <div class="row-style">
+                    <dl>
+                        <dt>Language</dt>
+                        <li>JavaScript ES6+</li>
+                        <li>TypeScript</li>
+                        <li>Java</li>
+                    </dl>
+                    <dl>
+                        <dt>Back-End</dt>
+                        <li>NodeJS</li>
+                        <li>ExpressJS</li>
+                        <li>NestJS</li>
+                        <li>Sequelize</li>
+                        <li>TypeORM</li>
+                    </dl>
+                </div>
+                <div class="row-style">
+                    <dl>
+                        <dt>DataBase</dt>
+                        <li>MySQL</li>
+                    </dl>
+                    <dl>
+                        <dt>Front-End</dt>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JS ES6+</li>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="Skills">
+            <h1>Tools</h1>
+            <div>
+                <div>
+                    <dl>
+                        <dt>IDE</dt>
+                        <li>Visual Code Studio</li>
+                        <li>inteliJ</li>
+                    </dl>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row-column"></div>
     <div class="Projects" id="projects">
@@ -68,11 +130,11 @@
     </div>
     <div class="row-column"></div>
     <div class="Awards" id="awards">
-
+        <h1>Awards</h1>
     </div>
     <div class="row-column"></div>
     <div class="Others" id="others">
-
+        <h1>Others</h1>
     </div>
     <div class="row-column"></div>
     <footer class="Contact-me">
