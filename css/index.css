@@ -86,6 +86,7 @@ header > div > div:hover::after, header > div > div > a:hover {
 
 .head {
     margin-top: 75px;
+    width: 100%;
 }
 
 .pen {
@@ -112,6 +113,7 @@ header > div > div:hover::after, header > div > div > a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 #profile-photo {
@@ -124,6 +126,10 @@ header > div > div:hover::after, header > div > div > a:hover {
 
 .introduce-about {
     padding: 10px 0px 25px 60px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .introduce-about-contact a {
@@ -138,6 +144,7 @@ header > div > div:hover::after, header > div > div > a:hover {
 .Skills {
     flex-direction: row;
     display: flex;
+    justify-content: space-between;
 }
 
 .Skills > div {
@@ -164,4 +171,12 @@ header > div > div:hover::after, header > div > div > a:hover {
 .row-style {
     flex-direction: row;
     display : flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column-style {
+    flex-direction: column;
 }
