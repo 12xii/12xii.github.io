@@ -79,9 +79,15 @@ header {
     width: 65%;
     height: 100%;
     flex-direction: column;
-    margin-top: 100px;
     align-items: center;
     display: flex;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    margin-top: 100px;
+}
+
+.scroll {
+    scroll-snap-align: start;
 }
 
 .column-line {
@@ -136,3 +142,18 @@ span::after {
     margin-left: 5px;
 }
 
+.second-index {
+    width: 80%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+.second-index div {
+    height: 50vh;
+    width: 80%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
