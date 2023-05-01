@@ -1,167 +1,237 @@
-body {
-    width: 100%;
-    height: 100%;
+*{
     margin: 0;
     padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.root {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.cover-header {
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    background-color: #ffdd8f;
+    display: flex;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
 }
-
-* {
-    box-sizing: border-box;
-}
-
 header {
-    flex-wrap: wrap;
-    width: 125%;
-    height: 65px;
-    top: 0;
-    flex-direction: row;
+    width: 75%;
     display: flex;
     justify-content: space-around;
-    position: fixed;
-    background-color: rgb(255, 216, 125);
-    backface-visibility: hidden;
-    background-blend-mode: exclusion;
-    align-items: center;
 }
-
-.logo {
-    flex-direction: row;
+.lefts a {
+    gap: 15px;
+}
+.lefts a img {
+    width: 50px;
+    border-radius: 15%;
+}
+.lefts a {
+    left: 45%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     display: flex;
+}
+.rights {
+    justify-content: space-between;
     align-items: center;
+    display: flex;
+    width: 45%;
+    gap : 5%;
+    transition: all 0.25s;
 }
-
-.logo > svg{
-    border-radius: 50%;
+.rights div {
+    width: 30%;
+    transition: all 0.25s ease-out;
 }
-
-header>div>div>a {
-    color: rgb(23, 23, 27);
-    text-decoration: none;
-    display: block;
-}
-
-header>div>a:hover {
-    color: rgb(201, 170, 255);
-    transition: color 0.25s ease-in-out;
-}
-
-header > div {
-    gap: 10px;
-}
-
-header>div>div {
-    position: relative; 
-    display: inline-block;
-    height: 5px; 
-    text-align: center;
-    line-height: 30px; 
-    cursor: pointer;
-    border: 5px;
-    padding: 5px;
-}
-
-header > div > div::after{
-    position: absolute; 
-    content:""; 
-    display: block; 
-    border-bottom: 3px solid rgb(255, 255, 255); 
-    color: rgb(255, 255, 255);
-    transition: all 250ms ease-out; 
-    left: 50%; 
-    width: 0;
-}
-
-header > div > div:hover::after, header > div > div > a:hover {
-    color: rgb(255, 255, 255);
-    display: block;
-    transition: color, width 350ms,250ms ease-in-out;
-    left: 0%;
+.rights div a:hover{
+    color: #ffffff;
     width: 100%;
+    transition: all 0.25s ease-out;
+}
+.rights div::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0%;
+    border-bottom: 3px solid #ffffff;
+    transition: all 0.25s ease-out;
+}
+.rights div:hover::after{
+    color: #ffffff;
+    width: 5%;
+    transition: width 0.25s ease-out;
 }
 
-.head {
-    margin-top: 75px;
+.Inner {
+    width: 100%;
+    height: 100% - 100px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    margin: 100px 0 15px 0;
 }
 
-.pen {
-    color : white;
-    background-color: rgb(255, 216, 125);
+.scroll {
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
 }
 
 .column-line {
-    border-left: 0.5px solid gray;
-    height: 350px;
+    border-left: 0.5px solid #808080;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
-.row-column {
-    border-top: 0.5px solid gray;
+.row-line {
+    border-bottom: 0.5px solid #808080;
     width: 500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 30px;
 }
 
-.expression {
-    padding-left: 25px;
+span::after {
+    position: absolute;
+    display: block;
+    content: "";
+    color:#ffdd8f;
+    border-bottom: 3px solid #ffdd8f;
+    width: 5%;
 }
 
-.introduce {
+.first-index {
+    width: 65%;
     flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.first-index div{
+    flex-direction: column;
+    display: flex;
+}
+.first-index img {
+    border-radius: 8%;
 }
 
-#profile-photo {
-    padding: 10px 60px 25px 0px;
+.first-index .container {
+    height: 85vh;
     flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+.first-index .container a p {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: 5px;
 }
 
-.introduce-about {
-    padding: 10px 0px 25px 60px;
-}
-
-.introduce-about-contact a {
-    text-decoration: none;
-    color: black;
-}
-
-#icon-github {
-    margin-right: 4px;
-}
-
-.Skills {
-    flex-direction: row;
-    display: flex;
-}
-
-.Skills > div {
-    padding: 15px;
+.second-index {
+    width: 65%;
+    height: 90vh;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+.second-index div {
+    height: 50vh;
+    width: 80%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.third-index {
+    width: 65%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+.third-index div {
+    width: 100%;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     display: flex;
 }
 
-.Skills > div > div {
-    flex-direction: row;
+.forth-index {
+    width: 65%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     display: flex;
+}
+.box2 {
+    width: 100%;
+    height: 30vh;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-out;
+}
+.box {
+    width: 20vw;
+    height: 27vh;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 3%;
+    transition: all 0.3s ease-out;
+    margin: 0px 10px 0px 10px;
+}
+.box:hover {
+    transition: all 0.3s ease-out;
+    box-shadow: 1px 3px 10px #8e8e8e;
 }
 
-.Skills > ul {
-    padding-top: 10px;
-    gap : 10px;
+.fifth-index {
+    width: 65%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    margin-bottom: 5vh;
 }
-
-.Skills > dl {
+.fifth-index div {
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:start;
     display: flex;
 }
 
-.row-style {
+.cover-footer {
+    width: 100%;
+    height: 40vh;
     flex-direction: row;
-    display : flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
+    display: flex;
+    background: #ffdd8f;
 }
